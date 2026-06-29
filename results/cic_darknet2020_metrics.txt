@@ -1,0 +1,56 @@
+Network Traffic Classification Metrics
+
+Model Comparison Summary
++-----------------+---------------------------+----------+--------------------+-----------------+-------------+----------+
+| Dataset         | Model                     | Accuracy | Weighted Precision | Weighted Recall | Weighted F1 | Macro F1 |
++-----------------+---------------------------+----------+--------------------+-----------------+-------------+----------+
+| CIC-Darknet2020 | Simple LSTM               | 0.9105   | 0.9127             | 0.9105          | 0.9104      | 0.8463   |
+| CIC-Darknet2020 | Transformer-Enhanced LSTM | 0.9224   | 0.9219             | 0.9224          | 0.9220      | 0.8524   |
++-----------------+---------------------------+----------+--------------------+-----------------+-------------+----------+
+
+====================================================================================================
+Dataset: CIC-Darknet2020
+Label column: Label
+Class distribution:
+- train: Non-Tor: 45363, NonVPN: 14151, Tor: 825, VPN: 11845
+- validation: Non-Tor: 9720, NonVPN: 3032, Tor: 177, VPN: 2539
+- test: Non-Tor: 9721, NonVPN: 3033, Tor: 177, VPN: 2538
+
+Metrics: Simple LSTM
++----------+--------------------+-----------------+-------------+----------+
+| Accuracy | Weighted Precision | Weighted Recall | Weighted F1 | Macro F1 |
++----------+--------------------+-----------------+-------------+----------+
+| 0.9105   | 0.9127             | 0.9105          | 0.9104      | 0.8463   |
++----------+--------------------+-----------------+-------------+----------+
+
+Classification Report: Simple LSTM
+              precision    recall  f1-score   support
+
+     Non-Tor     0.9865    0.9880    0.9873      9721
+      NonVPN     0.8293    0.7290    0.7759      3033
+         Tor     0.8631    0.8192    0.8406       177
+         VPN     0.7328    0.8373    0.7815      2538
+
+    accuracy                         0.9105     15469
+   macro avg     0.8529    0.8434    0.8463     15469
+weighted avg     0.9127    0.9105    0.9104     15469
+
+
+Metrics: Transformer-Enhanced LSTM
++----------+--------------------+-----------------+-------------+----------+
+| Accuracy | Weighted Precision | Weighted Recall | Weighted F1 | Macro F1 |
++----------+--------------------+-----------------+-------------+----------+
+| 0.9224   | 0.9219             | 0.9224          | 0.9220      | 0.8524   |
++----------+--------------------+-----------------+-------------+----------+
+
+Classification Report: Transformer-Enhanced LSTM
+              precision    recall  f1-score   support
+
+     Non-Tor     0.9836    0.9919    0.9877      9721
+      NonVPN     0.8428    0.7939    0.8177      3033
+         Tor     0.7737    0.8305    0.8011       177
+         VPN     0.7908    0.8160    0.8032      2538
+
+    accuracy                         0.9224     15469
+   macro avg     0.8477    0.8581    0.8524     15469
+weighted avg     0.9219    0.9224    0.9220     15469

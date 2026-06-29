@@ -1,0 +1,5 @@
+CIC-Darknet2020 official dataset page:
+https://www.kaggle.com/datasets/dhoogla/cicdarknet2020
+
+UNSW-NB15 official dataset page:
+https://www.kaggle.com/datasets/dhoogla/unswnb15
